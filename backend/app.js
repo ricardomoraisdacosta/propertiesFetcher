@@ -13,7 +13,6 @@ app.use((req, res, next) => {
 
   app.use("/api", getProperties.routes);
 
-
 const port = 3001;
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
