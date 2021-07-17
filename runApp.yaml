@@ -1,0 +1,12 @@
+version: "3.1"
+
+services:
+  reactapp:
+    image: registry.gitlab.com/ricardoimdacosta/properties-fe
+    ports:
+      - 8888:8888
+
+  nodeapp:
+    image: registry.gitlab.com/ricardoimdacosta/properties-be
+    ports:
+      - 3001:3001
