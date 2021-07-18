@@ -3,6 +3,7 @@ const cityProperties = require("../data/properties-2.json");
 
 exports.getProperties = (req, res) => {
   let parsedProperties = cityProperties.properties.map((property) => ({
+    // Remap all info with just the needed info
     id: property.id,
     name: property.name,
     description: property.description,

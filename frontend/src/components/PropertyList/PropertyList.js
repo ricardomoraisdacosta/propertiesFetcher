@@ -3,21 +3,22 @@ import Property from "./Property/Property";
 import classes from "./PropertyList.module.css";
 
 const PropertyList = (props) => {
-  const [cityProperties, setCityProperties] = useState([]);
-  const [fetchingData, setFetchingData] = useState(false);
+  const [cityProperties, setCityProperties] = useState([]); // state For Properties List  (if there is a change in the properties it will re-render)
+  const [fetchingData, setFetchingData] = useState(false); //State For Loading
   useEffect(() => {
-    setFetchingData(true);
+    setFetchingData(true); // set Loading state in true
     fetch("http://localhost:3001/api/properties")
       .then((response) => response.json())
       .then((data) => {
         setCityProperties(data);
-        setFetchingData(false);
+        setFetchingData(false); // set Loading state in false
       });
   }, []);
 
   let city;
   let propertyList;
   if (cityProperties.length !== 0) {
+    // if the cityProperties exists
     city = cityProperties.location.city.name;
     propertyList = cityProperties.properties.map((item) => (
       <Property
