@@ -1,10 +1,10 @@
 import classes from "./App.module.css";
-import Main from "./components/Main/Main";
+import PropertyList from "./components/PropertyList/PropertyList";
 
 function App() {
   return (
     <div className={classes.App}>
-      <Main />
+      <PropertyList />
     </div>
   );
 }

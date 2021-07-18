@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Property.module.css";
-import featuredLogo from "../../../../assets/featured.png";
+import featuredLogo from "../../../assets/featured.png";
 
 const Property = (props) => {
   return (
